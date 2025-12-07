@@ -4,8 +4,8 @@
       "key": "value"
     },
     "discord_user": {
-      "id": "1303002284136857694",
-      "username": "avirt_",
+      "id": "null",
+      "username": "null",
       "avatar": "307eb1d75bc8a5cbfdb954c7fd0a1d6f",
       "discriminator": "0",
       "clan": null,
@@ -40,7 +40,7 @@
         "id": "custom",
         "name": "Custom Status",
         "type": 4,
-        "state": "᲼ mc.vibe-shield.ru",
+        "state": "null",
         "session_id": "4a8e90cb9aca048c8ba0ea49394c7f26",
         "created_at": 1765104926589
       },
