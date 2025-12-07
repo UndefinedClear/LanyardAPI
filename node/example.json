@@ -1,0 +1,68 @@
+{
+  "data": {
+    "kv": {
+      "key": "value"
+    },
+    "discord_user": {
+      "id": "1303002284136857694",
+      "username": "avirt_",
+      "avatar": "307eb1d75bc8a5cbfdb954c7fd0a1d6f",
+      "discriminator": "0",
+      "clan": null,
+      "primary_guild": {
+        "tag": "CODE",
+        "identity_guild_id": "547906569489350657",
+        "badge": "3858554c542da4e8e4b52ff00a558ced",
+        "identity_enabled": true
+      },
+      "avatar_decoration_data": {
+        "sku_id": "1256321669467865088",
+        "asset": "a_1005898c6acf56a9ac5010baf444f6fd",
+        "expires_at": null
+      },
+      "collectibles": {
+        "nameplate": {
+          "label": "COLLECTIBLES_ORB_MAGIC_MISTS_NP_A11Y",
+          "sku_id": "1427463138646954036",
+          "asset": "nameplates/orb/magical_mist/",
+          "expires_at": null,
+          "palette": "cobalt"
+        }
+      },
+      "bot": false,
+      "global_name": "Neoˢᵖᵃᶜᵉ",
+      "display_name": "Neoˢᵖᵃᶜᵉ",
+      "display_name_styles": null,
+      "public_flags": 0
+    },
+    "activities": [
+      {
+        "id": "custom",
+        "name": "Custom Status",
+        "type": 4,
+        "state": "᲼ mc.vibe-shield.ru",
+        "session_id": "4a8e90cb9aca048c8ba0ea49394c7f26",
+        "created_at": 1765104926589
+      },
+      {
+        "id": "b6b70162f6815dee",
+        "name": "Minecraft",
+        "type": 0,
+        "session_id": "b6c31bdde11dc3790256e18504d6480d",
+        "application_id": "1402418491272986635",
+        "timestamps": {
+          "start": 1764878413168
+        },
+        "created_at": 1764893120832
+      }
+    ],
+    "discord_status": "online",
+    "active_on_discord_web": false,
+    "active_on_discord_desktop": true,
+    "active_on_discord_mobile": false,
+    "active_on_discord_embedded": false,
+    "listening_to_spotify": false,
+    "spotify": null
+  },
+  "success": true
+}
