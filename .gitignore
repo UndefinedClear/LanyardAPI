@@ -1,0 +1,7 @@
+node_modules
+
+node/lanyardapi/node_modules
+node\lanyardapi\node_modules
+
+test_my_package/node_modules
+test_my_package\node_modules
