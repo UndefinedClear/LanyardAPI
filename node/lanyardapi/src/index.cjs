@@ -6,7 +6,6 @@ class LanyardAPI {
     constructor(userId) {
         this.userId = userId;
         this.url = BASE_URL + userId;
-        this._cache = null; // Optional: cache last response
     }
 
     async fetch() {
@@ -15,8 +14,7 @@ class LanyardAPI {
             if (!res.data?.success) {
                 throw new Error('Lanyard API returned success=false');
             }
-            this._cache = res.data.data; // Only store the inner "data" object
-            return this._cache;
+            return res.data.data;
         } catch (error) {
             console.error('Lanyard fetch error:', error.message);
             throw error;
@@ -56,24 +54,30 @@ class LanyardAPI {
     }
 
     async getUser() {
-        const userData = await this.getDiscordUser();
+        const userStatusData = await this.getStatus();
         return new User(
             userData.id,
             userData.global_name || userData.display_name || userData.username,
             userData.username,
             userData.avatar,
-            userData.bot
+            userData.bot,
+            userStatusData.status,
+            userStatusData.active_on,
+            userStatusData.listening_to_spotify
         );
     }
 }
 
 class User {
-    constructor(id, displayName, username, avatarHash, isBot = false) {
+    constructor(id, displayName, username, avatarHash, isBot = false, status, active_on, listening_to_spotify) {
         this.id = id;
         this.displayName = displayName;
         this.username = username;
         this.avatarHash = avatarHash;
         this.isBot = isBot;
+        this.status = status;
+        this.active_on = active_on;
+        this.listening_to_spotify = listening_to_spotify;
     }
 
     get avatarURL() {

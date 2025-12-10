@@ -2,6 +2,8 @@ const BASE_URL = 'https://api.lanyard.rest/v1/users/';
 
 class LanyardAPI {
     constructor(userId) {
+        console.log(`LanyardAPI by UndefinedClear (On Github)
+> v1.0`)
         this.userId = userId;
         this.url = BASE_URL + userId;
     }
@@ -57,23 +59,30 @@ class LanyardAPI {
 
     async getUser() {
         const userData = await this.getDiscordUser();
+        const userStatusData = await this.getStatus();
         return new User(
             userData.id,
             userData.global_name || userData.display_name || userData.username,
             userData.username,
             userData.avatar,
-            userData.bot
+            userData.bot,
+            userStatusData.status,
+            userStatusData.active_on,
+            userStatusData.listening_to_spotify
         );
     }
 }
 
 class User {
-    constructor(id, displayName, username, avatarHash, isBot = false) {
+    constructor(id, displayName, username, avatarHash, isBot = false, status, active_on, listening_to_spotify) {
         this.id = id;
         this.displayName = displayName;
         this.username = username;
         this.avatarHash = avatarHash;
         this.isBot = isBot;
+        this.status = status;
+        this.active_on = active_on;
+        this.listening_to_spotify = listening_to_spotify;
     }
 
     get avatarURL() {
